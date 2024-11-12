@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>IsNullVsEqualsNull.Benchmarks-20241112-113102</title>
+<title>IsNullVsEqualsNull.Benchmarks-20241112-114437</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,18 +22,18 @@ Intel Core i7-1065G7 CPU 1.30GHz, 1 CPU, 8 logical and 4 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method</th><th>Count</th><th>Mean</th><th>Error</th><th>Rank</th>
+<thead><tr><th>Method</th><th>Count</th><th>Mean   </th><th>Error </th><th>StdDev</th><th>StdErr</th><th>Min    </th><th>Q1     </th><th>Median </th><th>Q3     </th><th>Max    </th><th>Op/s  </th><th>Rank</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>IsNull</td><td>1</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>EqualsNull</td><td>1</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>IsNull</td><td>100</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>EqualsNull</td><td>100</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>IsNull</td><td>1000</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>EqualsNull</td><td>1000</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>IsNull</td><td>10000</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>EqualsNull</td><td>10000</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>IsNull</td><td>100000</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>EqualsNull</td><td>100000</td><td>NA</td><td>NA</td><td>?</td>
+</thead><tbody><tr><td>IsNull</td><td>1</td><td>12.26 ns</td><td>0.156 ns</td><td>0.146 ns</td><td>0.038 ns</td><td>12.00 ns</td><td>12.16 ns</td><td>12.32 ns</td><td>12.36 ns</td><td>12.51 ns</td><td>81,553,571.7</td><td>1</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>EqualsNull</td><td>1</td><td>12.60 ns</td><td>0.263 ns</td><td>0.360 ns</td><td>0.071 ns</td><td>12.19 ns</td><td>12.36 ns</td><td>12.43 ns</td><td>12.84 ns</td><td>13.47 ns</td><td>79,334,546.8</td><td>1</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>IsNull</td><td>100</td><td>216.93 ns</td><td>4.358 ns</td><td>5.666 ns</td><td>1.157 ns</td><td>206.63 ns</td><td>213.33 ns</td><td>216.38 ns</td><td>219.85 ns</td><td>232.58 ns</td><td>4,609,881.5</td><td>3</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>EqualsNull</td><td>100</td><td>201.63 ns</td><td>1.906 ns</td><td>1.592 ns</td><td>0.441 ns</td><td>197.49 ns</td><td>201.36 ns</td><td>201.84 ns</td><td>202.72 ns</td><td>203.65 ns</td><td>4,959,458.1</td><td>2</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>IsNull</td><td>1000</td><td>1,861.80 ns</td><td>24.127 ns</td><td>21.388 ns</td><td>5.716 ns</td><td>1,830.20 ns</td><td>1,847.80 ns</td><td>1,857.79 ns</td><td>1,880.52 ns</td><td>1,895.25 ns</td><td>537,114.4</td><td>4</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>EqualsNull</td><td>1000</td><td>1,866.18 ns</td><td>32.785 ns</td><td>30.668 ns</td><td>7.918 ns</td><td>1,803.67 ns</td><td>1,848.43 ns</td><td>1,857.07 ns</td><td>1,883.39 ns</td><td>1,921.96 ns</td><td>535,853.3</td><td>4</td><td>0.0076</td><td>32 B</td>
+</tr><tr><td>IsNull</td><td>10000</td><td>50,493.10 ns</td><td>763.976 ns</td><td>677.245 ns</td><td>181.001 ns</td><td>49,627.86 ns</td><td>49,885.06 ns</td><td>50,285.85 ns</td><td>51,024.99 ns</td><td>51,556.21 ns</td><td>19,804.7</td><td>5</td><td>-</td><td>32 B</td>
+</tr><tr><td>EqualsNull</td><td>10000</td><td>51,274.83 ns</td><td>989.130 ns</td><td>925.233 ns</td><td>238.894 ns</td><td>50,088.40 ns</td><td>50,453.45 ns</td><td>50,921.28 ns</td><td>52,271.30 ns</td><td>52,502.28 ns</td><td>19,502.7</td><td>5</td><td>-</td><td>32 B</td>
+</tr><tr><td>IsNull</td><td>100000</td><td>650,413.83 ns</td><td>6,542.832 ns</td><td>5,800.050 ns</td><td>1,550.129 ns</td><td>643,569.34 ns</td><td>645,232.71 ns</td><td>649,927.00 ns</td><td>653,774.32 ns</td><td>660,906.64 ns</td><td>1,537.5</td><td>6</td><td>-</td><td>32 B</td>
+</tr><tr><td>EqualsNull</td><td>100000</td><td>647,234.89 ns</td><td>2,779.750 ns</td><td>2,464.176 ns</td><td>658.579 ns</td><td>643,284.72 ns</td><td>646,168.70 ns</td><td>646,544.19 ns</td><td>648,193.77 ns</td><td>652,893.31 ns</td><td>1,545.0</td><td>6</td><td>-</td><td>32 B</td>
 </tr></tbody></table>
 </body>
 </html>

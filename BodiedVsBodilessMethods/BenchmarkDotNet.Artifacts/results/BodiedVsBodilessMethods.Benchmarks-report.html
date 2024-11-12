@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BodiedVsBodilessMethods.Benchmarks-20241112-111706</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4317/23H2/2023Update/SunValley3)
+Intel Core i7-1065G7 CPU 1.30GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK 8.0.403
+  [Host]     : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+  DefaultJob : .NET 8.0.10 (8.0.1024.46610), X64 RyuJIT AVX-512F+CD+BW+DQ+VL+VBMI
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method   </th><th>Count</th><th>Mean    </th><th>Error  </th><th>StdDev </th><th>StdErr</th><th>Median  </th><th>Min     </th><th>Q1      </th><th>Q3      </th><th>Max    </th><th>Op/s   </th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>BodiedMethods</td><td>10</td><td>9.892 ns</td><td>0.2262 ns</td><td>0.5675 ns</td><td>0.0660 ns</td><td>9.744 ns</td><td>8.797 ns</td><td>9.542 ns</td><td>10.220 ns</td><td>11.30 ns</td><td>101,096,389.9</td><td>2</td><td>-</td>
+</tr><tr><td>BodilessMethods</td><td>10</td><td>9.270 ns</td><td>0.2253 ns</td><td>0.6242 ns</td><td>0.0662 ns</td><td>9.102 ns</td><td>8.427 ns</td><td>8.795 ns</td><td>9.570 ns</td><td>10.75 ns</td><td>107,875,756.1</td><td>1</td><td>-</td>
+</tr><tr><td>BodiedMethods</td><td>100</td><td>111.552 ns</td><td>2.2393 ns</td><td>2.3961 ns</td><td>0.5648 ns</td><td>111.089 ns</td><td>107.923 ns</td><td>110.405 ns</td><td>112.429 ns</td><td>118.49 ns</td><td>8,964,430.4</td><td>3</td><td>-</td>
+</tr><tr><td>BodilessMethods</td><td>100</td><td>115.402 ns</td><td>2.3079 ns</td><td>5.1619 ns</td><td>0.6664 ns</td><td>114.361 ns</td><td>107.828 ns</td><td>111.579 ns</td><td>118.055 ns</td><td>127.98 ns</td><td>8,665,339.6</td><td>3</td><td>-</td>
+</tr><tr><td>BodiedMethods</td><td>1000</td><td>1,119.686 ns</td><td>34.9456 ns</td><td>101.9380 ns</td><td>10.2973 ns</td><td>1,075.950 ns</td><td>1,004.615 ns</td><td>1,043.981 ns</td><td>1,196.760 ns</td><td>1,379.35 ns</td><td>893,107.9</td><td>5</td><td>-</td>
+</tr><tr><td>BodilessMethods</td><td>1000</td><td>1,011.588 ns</td><td>16.7045 ns</td><td>14.8081 ns</td><td>3.9576 ns</td><td>1,008.671 ns</td><td>996.305 ns</td><td>998.148 ns</td><td>1,022.253 ns</td><td>1,041.50 ns</td><td>988,544.3</td><td>4</td><td>-</td>
+</tr><tr><td>BodiedMethods</td><td>10000</td><td>10,825.971 ns</td><td>215.0105 ns</td><td>620.3545 ns</td><td>63.3147 ns</td><td>10,616.982 ns</td><td>9,997.545 ns</td><td>10,381.185 ns</td><td>11,237.531 ns</td><td>12,593.00 ns</td><td>92,370.5</td><td>6</td><td>-</td>
+</tr><tr><td>BodilessMethods</td><td>10000</td><td>11,306.834 ns</td><td>260.7634 ns</td><td>748.1793 ns</td><td>76.7616 ns</td><td>11,170.444 ns</td><td>10,137.364 ns</td><td>10,672.076 ns</td><td>11,751.286 ns</td><td>13,306.26 ns</td><td>88,442.1</td><td>6</td><td>-</td>
+</tr><tr><td>BodiedMethods</td><td>100000</td><td>111,068.866 ns</td><td>2,768.4824 ns</td><td>8,162.9333 ns</td><td>816.2933 ns</td><td>110,365.680 ns</td><td>100,895.593 ns</td><td>103,492.932 ns</td><td>115,829.135 ns</td><td>131,784.89 ns</td><td>9,003.4</td><td>7</td><td>-</td>
+</tr><tr><td>BodilessMethods</td><td>100000</td><td>102,453.156 ns</td><td>1,042.9992 ns</td><td>975.6221 ns</td><td>251.9046 ns</td><td>102,138.263 ns</td><td>101,376.740 ns</td><td>101,661.292 ns</td><td>103,004.980 ns</td><td>104,587.21 ns</td><td>9,760.6</td><td>7</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
